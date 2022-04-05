@@ -216,7 +216,7 @@ terraform import aws_securityhub_account.securityhubresource 123456789012
 variable "select_region" {
   description = "Uses the following AWS Region."
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-1"
 }
 
 variable "enable_security_hub" {
@@ -234,7 +234,7 @@ variable "enable_security_hub_prowler_subscription" {
 variable "prowler_cli_options" {
   description = "Run Prowler With The Following Command"
   type        = string
-  default     =  "-q -M json-asff -S -f us-east-1"
+  default     =  "-q -M json-asff -S -f eu-west-1"
 }
 
 variable "prowler_schedule"{
