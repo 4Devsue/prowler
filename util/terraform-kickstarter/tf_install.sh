@@ -1,6 +1,6 @@
 #!/bin/bash
 #AMZN-Linux Terraform Install Script
-git clone https://github.com/singergs/prowler.git
+git clone https://github.com/4Devsue/prowler-1.git
 git fetch
 cd prowler
 git checkout -t origin/terraform-kickstart
