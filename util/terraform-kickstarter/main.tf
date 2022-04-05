@@ -359,7 +359,7 @@ resource "aws_iam_policy" "prowler_kickstarter_iam_policy" {
       },
       {
             "Action": ["s3:PutObject", "s3:GetObject", "s3:GetObjectVersion", "s3:GetBucketAcl", "s3:GetBucketLocation"],
-            "Resource": "arn:aws:s3:::prowler-kickstart-${data.aws_region.current.name}-${data.aws_caller_identity.current.account_id}-reports/*",
+            "Resource": "arn:aws:s3:::prowler-firabarcelona-reports/*",
             "Effect": "Allow"
       },
     ]
@@ -372,7 +372,7 @@ resource "aws_iam_policy_attachment" "prowler_kickstarter_iam_policy_attach" {
   policy_arn = aws_iam_policy.prowler_kickstarter_iam_policy.arn
 }
 resource "aws_s3_bucket" "prowler_report_storage_bucket" {
-    bucket = "prowler-kickstart-${data.aws_region.current.name}-${data.aws_caller_identity.current.account_id}-reports"
+    bucket = "prowler-firabarcelona-reports"
     acl = "log-delivery-write"
     versioning {
         enabled = true
